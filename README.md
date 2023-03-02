@@ -1,2 +1,3 @@
 # etch-a-sketch
-An page that behaves lika the etch-a-sketch toy.
+
+A page that behaves like the etch-a-sketch toy.
