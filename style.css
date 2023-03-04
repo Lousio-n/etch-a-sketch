@@ -11,10 +11,10 @@ body {
   display: inline-grid;
 }
 
-.grid {
-  background-color: white;
+.gridSizeSlider {
+  text-align: center;
 }
 
-.gridBlack {
-  background-color: black;
+.grid {
+  background-color: white;
 }

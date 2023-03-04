@@ -10,7 +10,11 @@
 </head>
 <body>
   <h1>Etch-a-sketch!</h1>
-  <button class="changeSize">Size</button>
+  <div class="gridSizeSlider">
+    <input type="range" id="sizeSlider" name="size" min="16" max="96" value="32" step="16">
+    <p><output id="value"></output></p>
+  </div>
+  <button class="generateGrid">Generate</button>
   <div class="container">
     
   </div>
