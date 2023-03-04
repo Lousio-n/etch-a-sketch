@@ -6,7 +6,7 @@ const input = document.querySelector('#sizeSlider')
 value.textContent = input.value + "x" + input.value;
 
 input.addEventListener('input', (e) => {
-  value.textContent = e.target.value;
+  value.textContent = e.target.value + "x" + e.target.value;
 })
 
 generateGrid.addEventListener('click', () => {

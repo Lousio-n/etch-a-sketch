@@ -5,16 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
   <script defer src="./main.js"></script>
   <title>Etch-a-sketch</title>
 </head>
 <body>
   <h1>Etch-a-sketch!</h1>
-  <div class="gridSizeSlider">
-    <input type="range" id="sizeSlider" name="size" min="16" max="96" value="32" step="16">
-    <p><output id="value"></output></p>
+  <div class="generateBar">
+    <div class="gridSizeSlider">
+      <input type="range" id="sizeSlider" name="size" min="16" max="96" value="32" step="16">
+      <p><output id="value"></output></p>
+    </div>
+    <button class="generateGrid">Generate</button>
   </div>
-  <button class="generateGrid">Generate</button>
   <div class="container">
     
   </div>
