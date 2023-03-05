@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 const generateGrid = document.querySelector('.generateGrid');
-const eraseGrid = document.querySelector('.eraseGrid');
+const eraseGridButton = document.querySelector('.eraseGrid');
 const value = document.querySelector('#value');
 const input = document.querySelector('#sizeSlider')
 const colorCheckbox = document.getElementById('colorCheckbox');
@@ -34,6 +34,18 @@ makeGrid();
 generateGrid.addEventListener('click', () => {
   makeGrid()
 })
+
+eraseGridButton.addEventListener('click', () => {
+  eraseGrid();
+})
+
+function eraseGrid() {
+  let gridChildren = container.children;
+  for (let i = 0; i < gridChildren.length; i++) {
+    let child = gridChildren[i];
+    child.style.background = 'white'; 
+  }
+}
 
 container.addEventListener('mouseover', function (e) {
   if (colorCheckbox.checked === true) {
