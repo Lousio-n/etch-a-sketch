@@ -36,14 +36,14 @@ generateGrid.addEventListener('click', () => {
 })
 
 eraseGridButton.addEventListener('click', () => {
-  eraseGrid();
+  eraseGrid('white');
 })
 
-function eraseGrid() {
+function eraseGrid(color) {
   let gridChildren = container.children;
   for (let i = 0; i < gridChildren.length; i++) {
     let child = gridChildren[i];
-    child.style.background = 'white'; 
+    child.style.background = color; 
   }
 }
 
