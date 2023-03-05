@@ -1,7 +1,14 @@
 const container = document.querySelector('.container');
 const generateGrid = document.querySelector('.generateGrid');
+const eraseGrid = document.querySelector('.eraseGrid');
 const value = document.querySelector('#value');
 const input = document.querySelector('#sizeSlider')
+const colorCheckbox = document.getElementById('colorCheckbox');
+const opacityCheckbox = document.getElementById('opacityCheckbox');
+
+function getRandomColor() {
+  return('#' + Math.floor(Math.random()*16777215).toString(16));
+}
 
 value.textContent = input.value + "x" + input.value;
 
@@ -9,10 +16,9 @@ input.addEventListener('input', (e) => {
   value.textContent = e.target.value + "x" + e.target.value;
 })
 
-generateGrid.addEventListener('click', () => {
+function makeGrid() {
   container.replaceChildren();
-  let val = document.querySelector('input').value;
-  let gridSize = val;
+  let gridSize = input.value;
 
   container.setAttribute('style', 'grid-template-columns: repeat(' + gridSize + ', 1fr);')
 
@@ -21,8 +27,18 @@ generateGrid.addEventListener('click', () => {
     grid.classList.add('grid');
     container.appendChild(grid);
   }
+}
+
+makeGrid();
+
+generateGrid.addEventListener('click', () => {
+  makeGrid()
 })
 
 container.addEventListener('mouseover', function (e) {
-  e.target.style.background = 'black';
+  if (colorCheckbox.checked === true) {
+    e.target.style.background = getRandomColor();
+  } else {
+    e.target.style.background = 'black';
+  }
 })
