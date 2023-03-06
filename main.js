@@ -4,7 +4,6 @@ const eraseGridButton = document.querySelector('.eraseGrid');
 const value = document.querySelector('#value');
 const input = document.querySelector('#sizeSlider')
 const colorCheckbox = document.getElementById('colorCheckbox');
-const opacityCheckbox = document.getElementById('opacityCheckbox');
 
 function getRandomColor() {
   return('#' + Math.floor(Math.random()*16777215).toString(16));
